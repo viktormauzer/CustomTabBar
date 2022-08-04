@@ -71,8 +71,6 @@ struct CustomTabBar: View {
                     Button { action(tabItem) }
                     label: { CustomTabBarButtonLabel(selectedTab: selectedTab, tabItem: tabItem) }
                 }
-                
-
             }
             .padding(.bottom, 40)
         }
@@ -99,11 +97,8 @@ struct CustomTabBarButtonLabel: View {
                     .customTabItemStyle(selectedTab, tabItem, frameSize: 50)
             }
             
-            
             switch tabItem {
-            case .home:
-                Image(systemName: "house.fill")
-                
+            case .home: Image(systemName: "house.fill")
             case .explore: Image(systemName: "lasso")
             case .cart: Image(systemName: "cart.fill").font(.title2)
             case .search: Image(systemName: "magnifyingglass")
